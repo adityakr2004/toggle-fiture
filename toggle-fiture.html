@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>toggle fiture</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .btn{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid black;
+
+
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button class="btn">Light</button>
+    </div>
+
+    <script>
+        const btn = document.querySelector(".btn")
+        const container = document.querySelector(".container")
+
+        btn.addEventListener("click", (e) =>{
+            e.preventDefault()
+
+            if (btn.innerText == "Light") {
+                container.style.backgroundColor = "black"
+                btn.innerText ="Dark"
+            }else if(btn.innerText == "Dark"){
+                container.style.backgroundColor = "white"
+                btn.innerText ="Light"
+            }
+
+            // console.log("aditya")
+        })
+
+    </script>
+</body>
+</html>
